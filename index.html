@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+
+<body>
+
+  <main>
+    <section class="todo_container">
+      <h1 class="todo_header">TODO<span class="theme_toggle"><label for="theme-checkbox"><img class="theme_img"
+              src="./images/icon-sun.svg" alt="Icon of Sum theme"></label><input type="checkbox" name="checkbox"
+            class="theme_checkbox" id="theme-checkbox"></span></h1>
+      <input type="text" name="todo" id="input-todo" class="input_todo" />
+      <div class="todo_list_container">
+        <ul class="todo_list">
+        </ul>
+        <div class="todo_footer">
+          <p class="todo_task_stats"><span class="items_left"></span> items left</p>
+          <ul class="todo_filter_list">
+            <li class="filter_item active" onclick="remove_all_todo('all')">All</li>
+            <li class="filter_item" onclick="remove_all_todo('active')">Active</li>
+            <li class="filter_item" onclick="remove_all_todo('completed')">Completed</li>
+          </ul>
+          <p class="delete_completed_todo" onclick="remove_all_todo('remove')">Clear Completed</p>
+        </div>
+      </div>
+    </section>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Harshdeep Singh</a>.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
